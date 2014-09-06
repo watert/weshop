@@ -1,5 +1,8 @@
 <?php
 
+function image_good(){
+	return image_good_1080();
+}
 function image_good_1080(){
 	static $index = 1;
 	$index_str = sprintf("%02d",$index++);

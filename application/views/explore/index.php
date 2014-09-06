@@ -17,15 +17,17 @@
 	<?php // $this->load->view("_common/tabs"); ?>
 
 	<?php $this->load->view("_common/tabbar"); ?>
-	<?php $this->load->view("explore/modal-channels2"); ?>
-	<script src="public/js/rmodal.js"></script>
+	<?php $this->load->view("explore/modal-channels"); ?>
+
 	<script>
 		$(".tab-link:eq(0)").addClass("current");
 
+		// Channels with history
 		var $modal = $("#modal-channels");
-		var modal = $modal.data("rmodal")
+		// var modal = $modal.data("rmodal")
 		if(location.hash=="#modal-channels"){
-			modal.show();
+			$modal.addClass("show")
+			// modal.show();
 			// $("#modal-channels").addClass("show");
 		}
 		$modal.on("rmodal-show",function(){

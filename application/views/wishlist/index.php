@@ -21,6 +21,7 @@
 
 	<?php $this->load->view("_common/tabbar"); ?>
 	<?php $this->load->view("_common/footer"); ?>
+	<?php $this->load->view("wishlist/modal-more"); ?>
 	<script>
 		$(".tab-link:eq(1)").addClass("current");
 	</script>

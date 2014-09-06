@@ -16,6 +16,9 @@ class Wishlist extends CI_Controller {
 	public function profile(){
 		$this->load->view('wishlist/profile');
 	}
+	public function create(){
+		$this->load->view('wishlist/index-create');
+	}
 }
 
 /* End of file welcome.php */

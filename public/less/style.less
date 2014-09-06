@@ -8,8 +8,9 @@
 @import "rmodal.less";
 
 body.bubble {
-	-webkit-overflow-scrolling: touch;
+	// -webkit-overflow-scrolling: touch;
 	&.explore {margin-top: 66px;}
+
 	
 	.navbar {background: #FFF;}
 	.page-content {padding:0 20px;}
@@ -38,6 +39,17 @@ font-size: 16px;}
 	}
 
 	/* usercenter page*/
+	&.friends {
+		margin-top: 66px;
+
+		.avatar {height: 40px;width: 40px;border-radius: 0;margin-right: 10px;}
+		.desc {font-size: 11px;}
+		.section {padding: 0 20px; }
+		.user-item {
+			padding: 10px 0;border-bottom: 1px solid #CCC;margin-right: -20px;
+			&:last-child {border-bottom: 0;}
+		}
+	}
 	&.usercenter {
 		/*margin-top: 70px;*/
 		.navbar {position:static;padding: 10px 20px;margin-bottom: 0;border-bottom: 1px solid #CCC;}

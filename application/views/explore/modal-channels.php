@@ -60,6 +60,12 @@
 					<div class="col-xs-4">
 						<div class="channel-item" data-link="explore/channel">
 							<div class="img center-cropped" style="background-image:url(<?=image_channel();?>)"></div>
+							<div class="channel-title">运动</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="channel-item" data-link="explore/channel">
+							<div class="img center-cropped" style="background-image:url(<?=image_channel();?>)"></div>
 							<div class="channel-title">家居</div>
 						</div>
 					</div>
@@ -73,6 +79,24 @@
 						<div class="channel-item" data-link="explore/channel">
 							<div class="img center-cropped" style="background-image:url(<?=image_channel();?>)"></div>
 							<div class="channel-title">家居</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="channel-item" data-link="explore/channel">
+							<div class="img center-cropped" style="background-image:url(<?=image_channel();?>)"></div>
+							<div class="channel-title">运动</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="channel-item" data-link="explore/channel">
+							<div class="img center-cropped" style="background-image:url(<?=image_channel();?>)"></div>
+							<div class="channel-title">家居</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="channel-item" data-link="explore/channel">
+							<div class="img center-cropped" style="background-image:url(<?=image_channel();?>)"></div>
+							<div class="channel-title">运动</div>
 						</div>
 					</div>
 					<div class="col-xs-4">
@@ -98,7 +122,3 @@
 		</div><!-- /.rmodal-content -->
 	</div><!-- /.rmodal-dialog -->
 </div><!-- /.rmodal -->
-
-<script>
-require(["bootstrap"]);
-</script>

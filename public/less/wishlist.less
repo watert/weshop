@@ -1,5 +1,9 @@
 body.bubble.wishlist {
 	margin-top: 70px;
+	.section {padding:10px 20px;margin-bottom: 20px;}
+	.section-title {margin-top: 0;font-size:15px;margin:5px 0 20px;font-weight: normal;color:#999;}
+	.btn-edit {margin-top: -5px;padding: 5px 10px ;margin-right: -10px;}
+
 	.navbar {min-height: 0;border-bottom: 1px solid rgba(0,0,0,.1);text-align: center;
 		// .nav-link {font-size: 16px;}
 		@btn-more-size:30px;
@@ -12,9 +16,53 @@ body.bubble.wishlist {
 			padding: 0;
 			color:#666;margin:6px 20px 4px 4px;
 		}
+		.dropdown-menu {
+			padding: 0;left: auto;right: 0;top: 110%;
+			a {padding:10px 20px;border-bottom: 1px solid #CCC;text-align: center;
+				font-size: 16px;
+			}
+			li:last-child a {border-bottom: none;}
+
+			/* Top Angle */
+			&::before {
+				content: " ";width: 0;height: 0;
+				border: 10px solid transparent;border-bottom: 10px solid #CCC;
+				position: absolute;right: 25px;top: -20px;
+			}
+			&::after {
+				content: " ";width: 0;height: 0;
+				border: 10px solid transparent;border-bottom: 10px solid #FFF;
+				position: absolute;right: 25px;top: -18px;
+			}
+		}
 	}
 	#my-wishlists {background: #fff;padding-top:15px;padding-bottom: 15px;border-bottom: 1px solid #CCC;margin-bottom: 20px; }
-	.avatar {margin-right: 0;margin-top: 3px;}
+	.topbar {
+		padding-left: 35px;
+		.wishlist-heading {
+			font-size:12px;
+		}
+		.btn-follow {padding:2px 10px;}
+		.meta {font-size:11px;margin: 5px 0;}
+		.avatar {margin-top: 3px;
+			&.pull-left {margin-left: -35px-5;margin-right: 5px;width:32px;height:32px;border-radius: 16px;}
+		}
+
+	}
+
+
+	#modal-wishlist-more {
+		&.show .rmodal-dialog {transform: translate(25%,0);}
+		.rmodal-dialog{
+			transform: translate(25%,-100%);
+			height: auto;
+			padding-top: 44px;
+			width: 80%;
+		}
+		.rmodal-content {padding:0;overflow: hidden;}
+		.list-group {margin:-1px;padding: 0;}
+		.list-group-item {border-radius: 0;}
+	}
 	.feed-item {
 		margin-top: 20px;
 		background: #FFF;
@@ -27,7 +75,6 @@ body.bubble.wishlist {
 		.feed-detail {
 			margin-top: 10px;
 			.img {width:100%;height:80px;border: none;margin:0 0 0;display: inline-block;}
-
 		}
 		.feed-images {margin-right: 20px;position: relative;}
 		.frame {margin-left: -8px;}
@@ -35,7 +82,7 @@ body.bubble.wishlist {
 		.btn-wishlist {
 			position: absolute;
 			right: -20px;
-			top: 20px;
+			top: 13px;
 			font-size: 18px;
 			width: 20px;
 			color: black;
@@ -48,17 +95,43 @@ body.bubble.wishlist {
 			.col-xs-4 {margin-bottom: 20px;}
 		}
 	}
+	&.detail {
+		margin-top: 0; padding-top: 0;
+	}
+	&.create {
+		padding-top: 0; margin-top: 20px;
+		background: #FFF;
+		input {margin-bottom: 32px;line-height: 44px;
+height: 44px;}
+		hr {margin:15px 0;}
+	}
 
 	.good-item {
 		overflow: hidden;
 		@good-size-small:80px;
 		padding:10px;
-		img {width:@good-size-small;height:@good-size-small; }
-		.good-title {font-size:18px;margin-top: 10px;}
+		img {width:@good-size-small;height:@good-size-small; 
+			&.avatar {width: 24px;height: 24px;border-radius: 12px;margin-top: -3px;display: inline-block;}
+		}
+		.good-title {font-size:15px;margin-top: 5px;margin-bottom: 5px;padding:0;}
 		.detail {
 			margin-left: @good-size-small+10;
 		}
 		.price strong {font-size: 20px;color:red;font-weight: normal;}
+		.cometrue {margin-top: 2px;}
+		.btn-more {
+			float: right;
+			margin-top: 25px;
+			display: inline-block;
+			padding: 0;
+			border-radius: 15px;
+			height: 30px;
+			width: 30px;
+			background: #FFF;
+			font-size: 18px;
+			color: #666;
+			line-height: 30px;
+		}
 	}
 	.panel {
 		img {width:80px;height:80px;border: none;margin:0 0 0;display: inline-block;}

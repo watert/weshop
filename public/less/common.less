@@ -1,10 +1,14 @@
 @icon-size:24px;
 @red:hsl(5,90%,50%);
-
+@btn-option-size:28px;
 body.bubble{
+	// overflow-y: scroll;
+	// -webkit-overflow-scrolling: touch;
+	 
 	//Helpers
 	margin: 0 0 66px 0;
 	background: #F7F7F7;
+	h3,h4 {font-size: 18px;margin:0;margin-bottom: 5px;}
 	.relative {position: relative;}
 	.text-small {font-size: 11px;}
 	.text-danger {color:@red;}
@@ -13,6 +17,17 @@ body.bubble{
 	.btn-default {color: #FFF;background: #999;border: none;}
 	.btn-o {border:1px solid #999;border-radius:20px;
 		&.btn-danger {color:@red;border-color: @red;background: transparent;}
+	}
+	.option-item {
+		line-height: 28px;
+		font-size: 18px;
+	}
+	.btn-option {  width:@btn-option-size;height:@btn-option-size;border-radius:@btn-option-size/2;
+		border:1px solid #CCC;padding:0;line-height: @btn-option-size;font-size:16px;text-align: center;
+		.fa {display: none; color:#FFF; }
+		&.checked {background: @red;border-color:@red;
+			.fa {display: inline-block;}
+		}
 	}
 	.btn-sm {padding:0 5px;}
 	.btn-radio {
@@ -37,7 +52,7 @@ body.bubble{
 	.row.frame {margin:0;
 		.col {margin:0;padding: 0;}
 	}
-
+	.section {margin:10px 0 20px;padding:10px 20px;background: #FFF;border:1px solid #DDD;border-width: 1px 0;}
 
 
 

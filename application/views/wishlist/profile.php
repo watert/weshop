@@ -11,39 +11,27 @@
 		$(".navbar .nav-link").removeClass("current").eq(1).addClass("current");
 	</script>
 
-	<div class="page-content">
+	<div class="container my-wishes section">
+		<span class="pull-right btn btn-link btn-edit">编辑</span>
+		<h3 class="section-title">您添加了<span class="text-danger">3个</span>心愿单</h3>
+		<div class="clear"></div>
 		<div class="wishlists">
 			<div class="row">
-				<div class="col-xs-4">
-					<img alt="" style="width:100%; background-image:url(<?=image_wishlist();?>); " class="img-square center-cropped">
-					<div class="caption text-center">
-						我的生日
-					</div>
-				</div>
-				<div class="col-xs-4">
-					<img alt="" style="width:100%; background-image:url(<?=image_wishlist();?>); " class="img-square center-cropped">
-					<div class="caption text-center">
-						买给女朋友的
-					</div>
-				</div>
-				<div class="col-xs-4">
-					<img alt="" style="width:100%; background-image:url(<?=image_wishlist();?>); " class="img-square center-cropped">
-					<div class="caption text-center">
-						周末买的
-					</div>
-				</div>
-				<div class="col-xs-4">
-					<img alt="" style="width:100%; background-image:url(<?=image_wishlist();?>); " class="img-square center-cropped">
-					<div class="caption text-center">
-						数码
-					</div>
-				</div>
-				<div class="col-xs-4">
-					<img alt="" style="width:100%; background-image:url(<?=image_wishlist();?>); " class="img-square center-cropped">
-					<div class="caption text-center">
-						书
-					</div>
-				</div>
+				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"我的生日"));?>
+				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"买给女朋友的"));?>
+				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"周末买的"));?>
+			</div>
+		</div>
+	</div>
+	<div class="container my-follows section">
+		<h3 class="section-title">您关注了<span class="text-danger">5个</span>心愿单</h3>
+		<div class="wishlists">
+			<div class="row">
+				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"我的生日"));?>
+				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"买给女朋友的"));?>
+				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"周末买的"));?>
+				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"数码"));?>
+				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"书"));?>
 			</div>
 		</div>
 	</div>
@@ -52,10 +40,12 @@
 
 	<?php $this->load->view("_common/tabbar"); ?>
 	<?php $this->load->view("_common/footer"); ?>
+	<?php $this->load->view("wishlist/modal-more"); ?>
 	<script>
-		require(["jquery"],function($){
-			$(".tab-link:eq(1)").addClass("current");
-		});
+		$(".tab-link:eq(1)").addClass("current");
+		require(["rmodal"],function(){
+
+		})
 	</script>
 </body>
 </html>

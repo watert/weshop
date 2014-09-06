@@ -1,5 +1,9 @@
+
 $ ->
+	FastClick.attach(document.body)
 	$body = $("body")
+		.on "touchstart", (e)->
+			return
 		.on "click","[data-link]",->
 			location.href = $(this).attr("data-link")
 		.on "click","[data-toggle-class]",->
