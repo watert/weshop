@@ -12,24 +12,27 @@ do ->
 			$("body").removeClass("rmodal-show")
 			@$el.trigger("rmodal-hide")
 		show:()->
-			@$el.addClass("show")
-			$("body").addClass("rmodal-show")
-			@$el.trigger("rmodal-show")
+			@$mask.show()
+			setTimeout =>
+				$("body").addClass("rmodal-show")
+				@$el.addClass("show")
+				@$el.trigger("rmodal-show")
+			,33
 		toggle:()->
 			if @$el.hasClass("show") then @hide()
 			else @show()
+		setMask:()->
+			@$mask = $("<div>","class":"rmodal-mask").insertBefore(@$el)
+				.click => 
+					@hide()
+				.on "webkitTransitionEnd", =>
+					unless @$el.hasClass("show") then @$mask.hide()
 		initialize:(options)->
 			@$el.data("rmodal",this)
+			@setMask()
 			if @$el.hasClass("show") then @show()
 			console.log("init",@$el)
-			$("body").on "click",".rmodal-mask",=> 
-				console.log "mask click"
-				@hide()
-				# .on "click","[data-toggle=rmodal]", ->
-				# 	$btn = $(this)
-				# 	$target = $($btn.attr("data-target"))
-				# 	$target.toggleClass("show")
-					# $body.toggleClass("rmodal-show")
+
 	$ -> 
 		$(".rmodal").each ->
 			$el = $(this)

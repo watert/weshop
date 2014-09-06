@@ -18,9 +18,14 @@
     };
 
     RModal.prototype.show = function() {
-      this.$el.addClass("show");
-      $("body").addClass("rmodal-show");
-      return this.$el.trigger("rmodal-show");
+      this.$mask.show();
+      return setTimeout((function(_this) {
+        return function() {
+          $("body").addClass("rmodal-show");
+          _this.$el.addClass("show");
+          return _this.$el.trigger("rmodal-show");
+        };
+      })(this), 33);
     };
 
     RModal.prototype.toggle = function() {
@@ -31,18 +36,29 @@
       }
     };
 
+    RModal.prototype.setMask = function() {
+      return this.$mask = $("<div>", {
+        "class": "rmodal-mask"
+      }).insertBefore(this.$el).click((function(_this) {
+        return function() {
+          return _this.hide();
+        };
+      })(this)).on("webkitTransitionEnd", (function(_this) {
+        return function() {
+          if (!_this.$el.hasClass("show")) {
+            return _this.$mask.hide();
+          }
+        };
+      })(this));
+    };
+
     RModal.prototype.initialize = function(options) {
       this.$el.data("rmodal", this);
+      this.setMask();
       if (this.$el.hasClass("show")) {
         this.show();
       }
-      console.log("init", this.$el);
-      return $("body").on("click", ".rmodal-mask", (function(_this) {
-        return function() {
-          console.log("mask click");
-          return _this.hide();
-        };
-      })(this));
+      return console.log("init", this.$el);
     };
 
     return RModal;

@@ -1,5 +1,4 @@
 <div id="modal-channels" class="rmodal rmodal-left-transform">
-	<div class="rmodal-mask"></div>
 	<div class="rmodal-dialog">
 		<div class="rmodal-content">
 			<div class="rmodal-body text-center">

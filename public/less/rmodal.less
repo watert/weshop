@@ -1,12 +1,10 @@
 .rmodal {
 	position: fixed;height:100%;width:100%;
-	top:0;left:0;z-index: -1;
+	top:0;left:0;z-index: 1000;
 
 	.transition(all);
-	.rmodal-dialog {position: absolute;top:0;left:0;height:80%;width:80%;overflow: hidden;
-		background: #FFF;
-		.transition(all);
-	}
+	background: #FFF;
+	.transition(all);
 	.rmodal-content {overflow:auto;padding:0 20px;
 		height:100%;width:100%;
 	}
@@ -14,9 +12,7 @@
 		z-index: 1000;
 		display: block;
 		opacity:1;
-		.rmodal-dialog {
-			.translate(0,0);
-		}
+		.translate(0,0);
 	}
 
 }
@@ -26,7 +22,6 @@ body.rmodal-show {
 	height:100%;
 	-webkit-overflow-scrolling:none;
 	.rmodal-mask {
-		display: block;
 		opacity:1;
 	}
 }
@@ -34,8 +29,8 @@ body.rmodal-show {
 .rmodal-mask {
 	.transition(all);
 	content:" ";width:100%;height:100%;position: absolute;
-	display: block;	background: rgba(0,0,0,.5);
-	display: none;top: 0;opacity: 0;
+	background: rgba(0,0,0,.5);
+	top: 0;opacity: 0;
 }
 
 /* Directions */
@@ -43,45 +38,35 @@ body.rmodal-show {
 	&.show .rmodal-dialog {
 		.translate(0,0);
 	}
-	.rmodal-dialog {
-		.translate(-100%,0);
-		height:100%;width:80%;
-	}
+	.translate(-100%,0);
+	height:100%;width:80%;
 }
 .rmodal-left {
 	&.show .rmodal-dialog {
 		.translate(0,0);
 	}
-	.rmodal-dialog {
-		.translate(-100%,0);
-		height:100%;width:80%;
-	}
+	.translate(-100%,0);
+	height:100%;width:80%;
 }
 .rmodal-right {
 	&.show .rmodal-dialog {
 		.translate(20%,0);
 	}
-	.rmodal-dialog {
-		.translate(-100%,0);
-		height:100%;width:80%;
-	}
+	.translate(-100%,0);
+	height:100%;width:80%;
 }
 
 .rmodal-bottom {
 	&.show .rmodal-dialog {
 		.translate(0,20%);
 	}
-	.rmodal-dialog {
-		.translate(0,100%);
-		height:80%;width:100%;
-	}
+	.translate(0,100%);
+	height:80%;width:100%;
 }
 .rmodal-top {
 	&.show .rmodal-dialog {
 		.translate(0,0);
 	}
-	.rmodal-dialog {
-		.translate(0,-100%);
-		height:80%;width:100%;
-	}
+	.translate(0,-100%);
+	height:80%;width:100%;
 }

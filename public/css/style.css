@@ -674,19 +674,7 @@ body.detail #tab-good-intro img {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
-  -webkit-transition: opacity 0.3s linear, all 0.3s ease-out;
-  -moz-transition: opacity 0.3s linear, all 0.3s ease-out;
-  -o-transition: opacity 0.3s linear, all 0.3s ease-out;
-  transition: opacity 0.3s linear, all 0.3s ease-out;
-}
-.rmodal .rmodal-dialog {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 80%;
-  width: 80%;
-  overflow: hidden;
+  z-index: 1000;
   background: #FFF;
   -webkit-transition: opacity 0.3s linear, all 0.3s ease-out;
   -moz-transition: opacity 0.3s linear, all 0.3s ease-out;
@@ -703,8 +691,6 @@ body.detail #tab-good-intro img {
   z-index: 1000;
   display: block;
   opacity: 1;
-}
-.rmodal.show .rmodal-dialog {
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -716,7 +702,6 @@ body.rmodal-show {
   -webkit-overflow-scrolling: none;
 }
 body.rmodal-show .rmodal-mask {
-  display: block;
   opacity: 1;
 }
 /* Mask */
@@ -729,20 +714,26 @@ body.rmodal-show .rmodal-mask {
   width: 100%;
   height: 100%;
   position: absolute;
-  display: block;
   background: rgba(0, 0, 0, 0.5);
-  display: none;
   top: 0;
   opacity: 0;
 }
 /* Directions */
+.rmodal-left-transform {
+  -webkit-transform: translate(-100%, 0);
+  -moz-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  height: 100%;
+  width: 80%;
+}
 .rmodal-left-transform.show .rmodal-dialog {
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   -o-transform: translate(0, 0);
 }
-.rmodal-left-transform .rmodal-dialog {
+.rmodal-left {
   -webkit-transform: translate(-100%, 0);
   -moz-transform: translate(-100%, 0);
   -ms-transform: translate(-100%, 0);
@@ -756,7 +747,7 @@ body.rmodal-show .rmodal-mask {
   -ms-transform: translate(0, 0);
   -o-transform: translate(0, 0);
 }
-.rmodal-left .rmodal-dialog {
+.rmodal-right {
   -webkit-transform: translate(-100%, 0);
   -moz-transform: translate(-100%, 0);
   -ms-transform: translate(-100%, 0);
@@ -770,13 +761,13 @@ body.rmodal-show .rmodal-mask {
   -ms-transform: translate(20%, 0);
   -o-transform: translate(20%, 0);
 }
-.rmodal-right .rmodal-dialog {
-  -webkit-transform: translate(-100%, 0);
-  -moz-transform: translate(-100%, 0);
-  -ms-transform: translate(-100%, 0);
-  -o-transform: translate(-100%, 0);
-  height: 100%;
-  width: 80%;
+.rmodal-bottom {
+  -webkit-transform: translate(0, 100%);
+  -moz-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  -o-transform: translate(0, 100%);
+  height: 80%;
+  width: 100%;
 }
 .rmodal-bottom.show .rmodal-dialog {
   -webkit-transform: translate(0, 20%);
@@ -784,11 +775,11 @@ body.rmodal-show .rmodal-mask {
   -ms-transform: translate(0, 20%);
   -o-transform: translate(0, 20%);
 }
-.rmodal-bottom .rmodal-dialog {
-  -webkit-transform: translate(0, 100%);
-  -moz-transform: translate(0, 100%);
-  -ms-transform: translate(0, 100%);
-  -o-transform: translate(0, 100%);
+.rmodal-top {
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
   height: 80%;
   width: 100%;
 }
@@ -797,14 +788,6 @@ body.rmodal-show .rmodal-mask {
   -moz-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   -o-transform: translate(0, 0);
-}
-.rmodal-top .rmodal-dialog {
-  -webkit-transform: translate(0, -100%);
-  -moz-transform: translate(0, -100%);
-  -ms-transform: translate(0, -100%);
-  -o-transform: translate(0, -100%);
-  height: 80%;
-  width: 100%;
 }
 body.bubble {
   /* search page*/
