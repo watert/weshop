@@ -1,0 +1,63 @@
+body.bubble {
+
+	.navbar {
+		position:fixed;width:100%;top:0;z-index:1100;
+		box-shadow: 0 0 1px rgba(0,0,0,.5);background: #FFF;border:none;
+		
+		.container {padding: 8px 10px 5px;}
+		.searchbar {margin-right: 88px;}
+		.barbuttons {text-align: right;}
+
+		.btn-link {
+			margin-left: -5px;
+			display: inline-block;
+			width:44px;
+			font-size: 20px;
+			padding: 0 6px;
+			text-align: center;
+		}
+		.btn-wrap {
+			margin:5px;
+			margin-right: 10px;
+			.btn {width:100%;}
+		}
+		.btn-with-label {margin:0 0 -3px;
+			line-height: 1em;
+			.btn-label {display: block;
+				line-height: 1em;
+				margin-top: 0;}
+		}
+		.btn-search {background:#eee;display: block;width: 100%;}
+	}
+
+	.nav-link,.tab-link { display: block;color:black;}
+	.nav-link {border-bottom: 3px solid #DDD;}
+
+	
+
+	.nav-link {font-size:15px;padding:6px;
+		&.current {border-color: @red;color:@red;}
+	}
+
+
+	/* tabbar */
+	.tabbar {
+		position: fixed;z-index:1100;bottom:0;width:100%;
+		
+		box-shadow: 0 0 1px rgba(0,0,0,.5);background: #FFF;
+		
+		&.tabbar-buy {
+			padding:10px;
+			.fa {font-size:22px;color:gray;}
+			.btn {margin-right: 4px;padding:6px 11px;}
+			.btn-link {padding:6px;}
+		}
+	}
+	.tab-link {
+		font-size:11px;
+		padding:5px;
+		color:#444;
+		&.current {color:@red;}
+		.fa {font-size:20px;}
+	}
+}

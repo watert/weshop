@@ -1,0 +1,127 @@
+@icon-size:24px;
+@red:hsl(5,90%,50%);
+
+body.bubble{
+	//Helpers
+	margin: 0 0 66px 0;
+	background: #F7F7F7;
+	.relative {position: relative;}
+	.text-small {font-size: 11px;}
+	.text-danger {color:@red;}
+	.btn:focus {outline: none;}
+	.btn-danger,.label-danger {background: @red;border: none;}
+	.btn-default {color: #FFF;background: #999;border: none;}
+	.btn-o {border:1px solid #999;border-radius:20px;
+		&.btn-danger {color:@red;border-color: @red;background: transparent;}
+	}
+	.btn-sm {padding:0 5px;}
+	.btn-radio {
+		display: inline-block;
+		padding: 0;
+		border: 1px solid #999;
+		border-radius: 10px;
+		height: 20px;
+		width: 20px;
+		margin: 0;
+		&.active {
+			border-color: @red;
+			background: @red;
+		}
+	}
+	.center-cropped {
+		width: 100%; //responsive
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}​
+	.row.frame {margin:0;
+		.col {margin:0;padding: 0;}
+	}
+
+
+
+
+	//extends
+	.modal[data-dir="bottom"] {
+		top: auto;
+		bottom: -50%;
+		.transition(bottom);
+		&.in {bottom:0%}
+	}
+	.modal[data-dir="left"] {
+		left: -260px;
+		top:0;
+		bottom:auto;
+		height:100%;
+		width:260px;
+		.transition(-webkit-transform);
+		&.in {
+			.translate(100%,0);
+			// left:0%;top:0;
+		}
+		.modal-dialog,.modal-content {min-height: 100%;}
+	}
+	.modal-dialog {margin: 0;padding: 0;}
+	.modal-content {border-radius: 0;border: none;}
+	.modal-footer {text-align: center;}
+
+
+	// common components
+	.avatar {background: #CCC;color:#FFF;
+		border-radius:@icon-size/2;width:@icon-size;height:@icon-size;
+		display: inline-block;text-align: center;font-size:@icon-size*.6;
+	}
+	.good-item {
+		margin-bottom: 20px;
+		background: #FFF;
+		border: 1px solid #DDD;
+		border-width: 1px 0;
+
+		padding:10px 20px 0;
+		.jumbotron {
+			margin:-10px -20px 10px;
+			.center-cropped {height:160px;}
+			border-radius: 0;padding:0;position: relative;
+			.label-channel {
+				margin:5px;line-height: 32px;padding: 0;font-size:13px;
+				border-radius: 16px;width:32px;height:32px;display: inline-block;
+				box-shadow: 0 1px 3px black;
+			}
+			.caption {
+				bottom:0;
+				position: absolute;
+				width:100%;
+				background: rgba(0,0,0,.7);
+				color:#FFF;
+				padding:5px 20px;
+			}
+			.good-title {font-size: 16px;margin-bottom: 0;font-weight: normal;}
+		}
+		.price-row{
+			.buy-counts {margin-top: 5px;}
+			.price {font-size: 20px;display: inline-block;transform: translate(0,2px);font-weight: normal;}
+		}
+		.user-acts {padding: 10px 0;
+			.btn {margin-top: -4px;}
+			.hearts-container {
+				display: inline-block;
+				border-radius: 15px;
+				border: 1px solid #999;
+				padding: 1px 10px;
+				vertical-align: middle;
+				margin-right: 6px;
+				.fa {color:#999;margin-left: -2px;}
+			}
+		}
+		.good-actions {
+			margin:10px -10px 0;
+			padding:10px;
+			line-height: 36px;
+			border-top: 1px solid #CCC;
+		}
+		.comment-content {
+			font-size: 11px;margin-top: 5px;
+		}
+		h2,h3,h4 {margin-top: 0;}
+	}
+}

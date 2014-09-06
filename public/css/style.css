@@ -1,0 +1,668 @@
+body.bubble {
+  margin: 0 0 66px 0;
+  background: #F7F7F7;
+}
+body.bubble .relative {
+  position: relative;
+}
+body.bubble .text-small {
+  font-size: 11px;
+}
+body.bubble .text-danger {
+  color: #f2200d;
+}
+body.bubble .btn:focus {
+  outline: none;
+}
+body.bubble .btn-danger,
+body.bubble .label-danger {
+  background: #f2200d;
+  border: none;
+}
+body.bubble .btn-default {
+  color: #FFF;
+  background: #999;
+  border: none;
+}
+body.bubble .btn-o {
+  border: 1px solid #999;
+  border-radius: 20px;
+}
+body.bubble .btn-o.btn-danger {
+  color: #f2200d;
+  border-color: #f2200d;
+  background: transparent;
+}
+body.bubble .btn-sm {
+  padding: 0 5px;
+}
+body.bubble .btn-radio {
+  display: inline-block;
+  padding: 0;
+  border: 1px solid #999;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  margin: 0;
+}
+body.bubble .btn-radio.active {
+  border-color: #f2200d;
+  background: #f2200d;
+}
+body.bubble .center-cropped {
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body.bubble  .row.frame {
+  margin: 0;
+}
+body.bubble  .row.frame .col {
+  margin: 0;
+  padding: 0;
+}
+body.bubble .modal[data-dir="bottom"] {
+  top: auto;
+  bottom: -50%;
+  -webkit-transition: opacity 0.3s linear, bottom 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, bottom 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, bottom 0.3s ease-out;
+  transition: opacity 0.3s linear, bottom 0.3s ease-out;
+}
+body.bubble .modal[data-dir="bottom"].in {
+  bottom: 0%;
+}
+body.bubble .modal[data-dir="left"] {
+  left: -260px;
+  top: 0;
+  bottom: auto;
+  height: 100%;
+  width: 260px;
+  -webkit-transition: opacity 0.3s linear, -webkit-transform 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, -webkit-transform 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, -webkit-transform 0.3s ease-out;
+  transition: opacity 0.3s linear, -webkit-transform 0.3s ease-out;
+}
+body.bubble .modal[data-dir="left"].in {
+  -webkit-transform: translate(100%, 0);
+  -moz-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+}
+body.bubble .modal[data-dir="left"] .modal-dialog,
+body.bubble .modal[data-dir="left"] .modal-content {
+  min-height: 100%;
+}
+body.bubble .modal-dialog {
+  margin: 0;
+  padding: 0;
+}
+body.bubble .modal-content {
+  border-radius: 0;
+  border: none;
+}
+body.bubble .modal-footer {
+  text-align: center;
+}
+body.bubble .avatar {
+  background: #CCC;
+  color: #FFF;
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  text-align: center;
+  font-size: 14.4px;
+}
+body.bubble .good-item {
+  margin-bottom: 20px;
+  background: #FFF;
+  border: 1px solid #DDD;
+  border-width: 1px 0;
+  padding: 10px 20px 0;
+}
+body.bubble .good-item .jumbotron {
+  margin: -10px -20px 10px;
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+}
+body.bubble .good-item .jumbotron .center-cropped {
+  height: 160px;
+}
+body.bubble .good-item .jumbotron .label-channel {
+  margin: 5px;
+  line-height: 32px;
+  padding: 0;
+  font-size: 13px;
+  border-radius: 16px;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  box-shadow: 0 1px 3px black;
+}
+body.bubble .good-item .jumbotron .caption {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #FFF;
+  padding: 5px 20px;
+}
+body.bubble .good-item .jumbotron .good-title {
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+body.bubble .good-item .price-row .buy-counts {
+  margin-top: 5px;
+}
+body.bubble .good-item .price-row .price {
+  font-size: 20px;
+  display: inline-block;
+  transform: translate(0, 2px);
+  font-weight: normal;
+}
+body.bubble .good-item .user-acts {
+  padding: 10px 0;
+}
+body.bubble .good-item .user-acts .btn {
+  margin-top: -4px;
+}
+body.bubble .good-item .user-acts .hearts-container {
+  display: inline-block;
+  border-radius: 15px;
+  border: 1px solid #999;
+  padding: 1px 10px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+body.bubble .good-item .user-acts .hearts-container .fa {
+  color: #999;
+  margin-left: -2px;
+}
+body.bubble .good-item .good-actions {
+  margin: 10px -10px 0;
+  padding: 10px;
+  line-height: 36px;
+  border-top: 1px solid #CCC;
+}
+body.bubble .good-item .comment-content {
+  font-size: 11px;
+  margin-top: 5px;
+}
+body.bubble .good-item h2,
+body.bubble .good-item h3,
+body.bubble .good-item h4 {
+  margin-top: 0;
+}
+body.bubble {
+  /* tabbar */
+}
+body.bubble .navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1100;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  background: #FFF;
+  border: none;
+}
+body.bubble .navbar .container {
+  padding: 8px 10px 5px;
+}
+body.bubble .navbar .searchbar {
+  margin-right: 88px;
+}
+body.bubble .navbar .barbuttons {
+  text-align: right;
+}
+body.bubble .navbar .btn-link {
+  margin-left: -5px;
+  display: inline-block;
+  width: 44px;
+  font-size: 20px;
+  padding: 0 6px;
+  text-align: center;
+}
+body.bubble .navbar .btn-wrap {
+  margin: 5px;
+  margin-right: 10px;
+}
+body.bubble .navbar .btn-wrap .btn {
+  width: 100%;
+}
+body.bubble .navbar .btn-with-label {
+  margin: 0 0 -3px;
+  line-height: 1em;
+}
+body.bubble .navbar .btn-with-label .btn-label {
+  display: block;
+  line-height: 1em;
+  margin-top: 0;
+}
+body.bubble .navbar .btn-search {
+  background: #eee;
+  display: block;
+  width: 100%;
+}
+body.bubble .nav-link,
+body.bubble .tab-link {
+  display: block;
+  color: black;
+}
+body.bubble .nav-link {
+  border-bottom: 3px solid #DDD;
+}
+body.bubble .nav-link {
+  font-size: 15px;
+  padding: 6px;
+}
+body.bubble .nav-link.current {
+  border-color: #f2200d;
+  color: #f2200d;
+}
+body.bubble .tabbar {
+  position: fixed;
+  z-index: 1100;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  background: #FFF;
+}
+body.bubble .tabbar.tabbar-buy {
+  padding: 10px;
+}
+body.bubble .tabbar.tabbar-buy .fa {
+  font-size: 22px;
+  color: gray;
+}
+body.bubble .tabbar.tabbar-buy .btn {
+  margin-right: 4px;
+  padding: 6px 11px;
+}
+body.bubble .tabbar.tabbar-buy .btn-link {
+  padding: 6px;
+}
+body.bubble .tab-link {
+  font-size: 11px;
+  padding: 5px;
+  color: #444;
+}
+body.bubble .tab-link.current {
+  color: #f2200d;
+}
+body.bubble .tab-link .fa {
+  font-size: 20px;
+}
+body.bubble.explore.select-channels {
+  padding: 0;
+  margin: 20px 0 60px;
+}
+body.bubble.explore.select-channels .page-header {
+  margin-top: 0;
+  color: #999;
+  border: none;
+  font-size: 20px;
+}
+body.bubble.explore.select-channels .channel-item {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background: #BBB;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+body.bubble.explore.select-channels .channel-item.selected {
+  color: #e08c85;
+}
+body.bubble.explore.select-channels .actions {
+  width: 100%;
+  text-align: center;
+}
+body.bubble.explore.select-channels .btn-finish {
+  font-size: 20px;
+  padding: 10px 80px;
+  margin-top: 20px;
+  border-radius: 30px;
+}
+body.bubble.explore.channel .navbar-top .navbar-inner {
+  padding: 0 15px;
+}
+body.bubble.explore.channel .navbar-top .fa {
+  padding: 15px;
+  margin-left: -15px;
+  font-size: 20px;
+  color: #666;
+}
+body.bubble.explore.channel .navbar-top .navbar-brand {
+  padding-left: 0;
+  margin-left: -10px;
+}
+body.bubble.explore.channel .navbar-top .btn-o {
+  margin: 10px 0 0;
+  padding: 3px 15px;
+}
+body.bubble.explore #modal-channels .rmodal-content {
+  padding: 50px 20px;
+}
+body.bubble.explore #modal-channels .img {
+  border-radius: 40px;
+  width: 60px;
+  height: 60px;
+}
+body.bubble.explore #modal-channels .rmodal-title {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+body.bubble.explore #modal-channels .row {
+  margin: 0 -10px;
+}
+body.bubble.explore #modal-channels .col-xs-4 {
+  padding: 10px;
+}
+body.bubble.wishlist {
+  margin-top: 70px;
+}
+body.bubble.wishlist .navbar {
+  min-height: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+body.bubble.wishlist .navbar .nav-link {
+  padding: 10px 0;
+}
+body.bubble.wishlist .navbar .btn-more {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  line-height: 30px;
+  padding: 0;
+  color: #666;
+  margin: 6px 20px 4px 4px;
+}
+body.bubble.wishlist #my-wishlists {
+  background: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 20px;
+}
+body.bubble.wishlist .avatar {
+  margin-right: 0;
+  margin-top: 3px;
+}
+body.bubble.wishlist .feed-item {
+  margin-top: 20px;
+  background: #FFF;
+  border: 1px solid #DDD;
+  border-width: 1px 0;
+  padding: 10px 20px;
+  padding-left: 49px;
+}
+body.bubble.wishlist .feed-item .avatar {
+  margin-left: -29px;
+}
+body.bubble.wishlist .feed-item .btn-follow {
+  margin-top: -3px;
+}
+body.bubble.wishlist .feed-item .feed-detail {
+  margin-top: 10px;
+}
+body.bubble.wishlist .feed-item .feed-detail .img {
+  width: 100%;
+  height: 80px;
+  border: none;
+  margin: 0 0 0;
+  display: inline-block;
+}
+body.bubble.wishlist .feed-item .feed-images {
+  margin-right: 20px;
+  position: relative;
+}
+body.bubble.wishlist .feed-item .frame {
+  margin-left: -8px;
+}
+body.bubble.wishlist .feed-item .col {
+  padding: 0 8px;
+}
+body.bubble.wishlist .feed-item .btn-wishlist {
+  position: absolute;
+  right: -20px;
+  top: 20px;
+  font-size: 18px;
+  width: 20px;
+  color: black;
+}
+body.bubble.wishlist.profile .wishlists {
+  font-size: 11px;
+}
+body.bubble.wishlist.profile .wishlists .col-xs-4 {
+  margin-bottom: 20px;
+}
+body.bubble.wishlist .good-item {
+  overflow: hidden;
+  padding: 10px;
+}
+body.bubble.wishlist .good-item img {
+  width: 80px;
+  height: 80px;
+}
+body.bubble.wishlist .good-item .good-title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+body.bubble.wishlist .good-item .detail {
+  margin-left: 90px;
+}
+body.bubble.wishlist .good-item .price strong {
+  font-size: 20px;
+  color: red;
+  font-weight: normal;
+}
+body.bubble.wishlist .panel img {
+  width: 80px;
+  height: 80px;
+  border: none;
+  margin: 0 0 0;
+  display: inline-block;
+}
+body.bubble.wishlist .panel-body {
+  padding: 10px;
+  position: relative;
+}
+body.detail .tabbar {
+  z-index: 1000;
+}
+body.detail #tab-good-intro img {
+  margin: 10px 0;
+  min-height: 120px;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+#modal-add2wish {
+  max-height: 80%;
+}
+#modal-add2wish .list-group {
+  margin: -20px;
+}
+#modal-add2wish .list-group-item {
+  padding: 15px 20px;
+}
+.rmodal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s linear, all 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, all 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, all 0.3s ease-out;
+  transition: opacity 0.3s linear, all 0.3s ease-out;
+  /* Mask */
+}
+.rmodal .rmodal-dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80%;
+  width: 80%;
+  overflow: hidden;
+  background: #FFF;
+  -webkit-transition: opacity 0.3s linear, all 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, all 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, all 0.3s ease-out;
+  transition: opacity 0.3s linear, all 0.3s ease-out;
+}
+.rmodal .rmodal-content {
+  overflow: scroll;
+  padding: 0 20px;
+}
+.rmodal.show {
+  opacity: 1;
+}
+.rmodal.show .rmodal-mask {
+  opacity: 1;
+}
+.rmodal.show .rmodal-dialog {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+}
+.rmodal .rmodal-mask {
+  -webkit-transition: opacity 0.3s linear, all 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, all 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, all 0.3s ease-out;
+  transition: opacity 0.3s linear, all 0.3s ease-out;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: .1;
+}
+/* Directions */
+.rmodal-left-transform.show .rmodal-dialog {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+}
+.rmodal-left-transform .rmodal-dialog {
+  -webkit-transform: translate(-100%, 0);
+  -moz-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  height: 100%;
+  width: 80%;
+}
+.rmodal-left-transform .rmodal-content {
+  height: 100%;
+  width: 100%;
+}
+.rmodal-left.show .rmodal-dialog {
+  left: 0;
+}
+.rmodal-left .rmodal-dialog {
+  height: 100%;
+  width: 80%;
+  left: -100%;
+}
+.rmodal-left .rmodal-content {
+  height: 100%;
+  width: 100%;
+}
+body.rmodal-show {
+  overflow: hidden;
+}
+body.bubble {
+  -webkit-overflow-scrolling: touch;
+  /* search page*/
+  /* usercenter page*/
+}
+body.bubble.explore {
+  margin-top: 66px;
+}
+body.bubble .navbar {
+  background: #FFF;
+}
+body.bubble .page-content {
+  padding: 0 20px;
+}
+body.bubble .form.search {
+  margin: 4px;
+}
+body.bubble .form.search input {
+  border-radius: 4px;
+}
+body.bubble .container {
+  margin: 0;
+  padding: 0;
+}
+body.bubble .container > .row {
+  margin: 0;
+}
+body.bubble .container > .row > .col {
+  padding: 0;
+}
+body.bubble a:hover {
+  text-decoration: none;
+}
+body.bubble.search {
+  margin-top: 50px;
+}
+body.bubble.search .navbar {
+  padding-top: 5px;
+}
+body.bubble.search .searchbar {
+  margin-right: 56px;
+}
+body.bubble.search .btn-cancel {
+  color: #00aaff;
+  margin: 4px 5px 2px 0;
+  font-size: 16px;
+}
+body.bubble.usercenter {
+  /*margin-top: 70px;*/
+}
+body.bubble.usercenter .navbar {
+  position: static;
+  padding: 10px 20px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #CCC;
+}
+body.bubble.usercenter .navbar-links {
+  font-size: 11px;
+  padding: 0;
+  text-align: center;
+}
+body.bubble.usercenter .navbar-links .row {
+  margin: 0;
+}
+body.bubble.usercenter .navbar-links .col-xs-3 {
+  padding: 0;
+}
+body.bubble.usercenter .navbar-links .link-item {
+  padding: 10px;
+  color: #666;
+}
+body.bubble.usercenter .navbar-links .fa {
+  font-size: 20px;
+}
+body.bubble.usercenter .avatar {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  line-height: 50px;
+  font-size: 20px;
+  margin-top: -5px;
+}

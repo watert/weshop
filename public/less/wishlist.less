@@ -1,0 +1,68 @@
+body.bubble.wishlist {
+	margin-top: 70px;
+	.navbar {min-height: 0;border-bottom: 1px solid rgba(0,0,0,.1);text-align: center;
+		// .nav-link {font-size: 16px;}
+		@btn-more-size:30px;
+		.nav-link {padding:10px 0;}
+		.btn-more {
+			width: @btn-more-size;
+			height: @btn-more-size;
+			border-radius: @btn-more-size/2;
+			line-height: @btn-more-size;
+			padding: 0;
+			color:#666;margin:6px 20px 4px 4px;
+		}
+	}
+	#my-wishlists {background: #fff;padding-top:15px;padding-bottom: 15px;border-bottom: 1px solid #CCC;margin-bottom: 20px; }
+	.avatar {margin-right: 0;margin-top: 3px;}
+	.feed-item {
+		margin-top: 20px;
+		background: #FFF;
+		border: 1px solid #DDD;
+		border-width: 1px 0;
+		padding: 10px 20px;
+		padding-left:@icon-size+20+5;
+		.avatar {margin-left: -@icon-size - 5;}
+		.btn-follow  {margin-top: -3px;}
+		.feed-detail {
+			margin-top: 10px;
+			.img {width:100%;height:80px;border: none;margin:0 0 0;display: inline-block;}
+
+		}
+		.feed-images {margin-right: 20px;position: relative;}
+		.frame {margin-left: -8px;}
+		.col {padding:0 8px;}
+		.btn-wishlist {
+			position: absolute;
+			right: -20px;
+			top: 20px;
+			font-size: 18px;
+			width: 20px;
+			color: black;
+		}
+	}
+
+	&.profile {
+		.wishlists {
+			font-size:11px;
+			.col-xs-4 {margin-bottom: 20px;}
+		}
+	}
+
+	.good-item {
+		overflow: hidden;
+		@good-size-small:80px;
+		padding:10px;
+		img {width:@good-size-small;height:@good-size-small; }
+		.good-title {font-size:18px;margin-top: 10px;}
+		.detail {
+			margin-left: @good-size-small+10;
+		}
+		.price strong {font-size: 20px;color:red;font-weight: normal;}
+	}
+	.panel {
+		img {width:80px;height:80px;border: none;margin:0 0 0;display: inline-block;}
+	}
+	.panel-body {padding:10px;position: relative;}
+
+}
