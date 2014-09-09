@@ -11,24 +11,22 @@
 		<div class="channels row">
 			<?php 
 			$channels = array(
-				array("name"=>"数码"),
-				array("name"=>"百货"),
-				array("name"=>"零食"),
-				array("name"=>"女装"),
-				array("name"=>"男装"),
-				array("name"=>"童装"),
-				array("name"=>"运动"),
-				array("name"=>"鞋包"),
-				array("name"=>"配饰"),
-				array("name"=>"生鲜"),
+				array("name"=>"穿戴设备"),
+				array("name"=>"户外热"),
+				array("name"=>"创意生活"),
+				array("name"=>"宝宝那些事"),
 				array("name"=>"折扣"),
-				array("name"=>"奢侈品")
-				);
+				array("name"=>"迪士尼"),
+				array("name"=>"摄友宝箱"),
+				array("name"=>"时尚潮人"),
+				array("name"=>"享受慢生活")
+			);
+
 			foreach ($channels as $key => $item): ?>
 				
 				
 				<div class="col-xs-4">
-					<div class="channel-item"><?=$item["name"]?></div>
+					<div data-toggle-class="active" class="channel-item"><?=$item["name"]?></div>
 				</div>
 		
 			<?php endforeach;?>

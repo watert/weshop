@@ -1,4 +1,30 @@
-body.detail {
+body#detail {
+	margin-top: 0;padding-top: 0;
+	.good-item {border-top: 0;margin-bottom: 0;}
+	.good-title {margin:5px 0;}
+	.details {
+		margin-bottom: 0;
+	}
+	.comments {
+		padding: 0;margin-top: -1px;
+	}
+	.comment-item {
+		padding: 10px 20px;
+		border-bottom: 1px solid #EEE;
+		&:last-child {border-bottom: none;}
+	}
+	.comment-content {
+
+		margin: 10px 0 5px;
+		font-size: 16px;
+	}
+	.spec {margin-top: -1px;padding:10px 20px;font-size:18px;
+		.fa {font-size: 20px;margin-top: 1px;}
+	}
+	.recommend {
+		.section-title {margin:0 0 20px;color:#666;font-weight: normal;}
+	}
+	.section.details {padding:0;}
 	.tabbar {z-index: 1000;}
 	#tab-good-intro {
 		img {margin:10px 0;min-height:120px;background-color: rgba(0,0,0,.1);width:100%;}

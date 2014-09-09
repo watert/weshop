@@ -11,29 +11,25 @@
 			<div class="col col-xs-3">
 				<div class="link-item">
 					<i class="fa fa-navicon"></i>
-					<br>
-					全部订单
+					<div class="link-name">全部订单</div>
 				</div>
 			</div>
 			<div class="col col-xs-3">
 				<div class="link-item">
 					<i class="fa fa-credit-card"></i>
-					<br>
-					待付款
+					<div class="link-name">待付款</div>
 				</div>
 			</div>
 			<div class="col col-xs-3">
 				<div class="link-item">
 					<i class="fa fa-truck"></i>
-					<br>
-					配送中
+					<div class="link-name">配送中</div>
 				</div>
 			</div>
 			<div class="col col-xs-3">
 				<div class="link-item">
 					<i class="fa fa-refresh"></i>
-					<br>
-					退换货
+					<div class="link-name">退换货</div>
 				</div>
 			</div>
 		</div>

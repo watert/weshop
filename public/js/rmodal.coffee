@@ -22,9 +22,10 @@ do ->
 			if @$el.hasClass("show") then @hide()
 			else @show()
 		setMask:()->
-			@$mask = $("<div>","class":"rmodal-mask").insertBefore(@$el)
-				.click => 
-					@hide()
+			@$mask = $("<div>","class":"rmodal-mask")
+				.insertBefore(@$el)
+				.hide()
+				.click => @hide()
 				.on "webkitTransitionEnd", =>
 					unless @$el.hasClass("show") then @$mask.hide()
 		initialize:(options)->

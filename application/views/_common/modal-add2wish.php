@@ -38,7 +38,7 @@
 			</div>
 			<div class="modal-footer text-center">
 				<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-				<button type="button" class="btn btn-danger">完成</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">完成</button>
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->

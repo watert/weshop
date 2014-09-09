@@ -1,4 +1,3 @@
-<div class="rmodal-mask"></div>
 <div id="modal-wishlist-more" class="rmodal rmodal-top">
 	<div class="rmodal-dialog">
 		<div class="rmodal-content">

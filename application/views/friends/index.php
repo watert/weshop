@@ -14,28 +14,28 @@
 	<div class="section">
 		<div class="user-item">
 			<img src="<?=image_avatar()?>" alt="" class="avatar pull-left">
-			<h3>Majorchen</h3>
+			<h3>March</h3>
 			<div class="desc text-muted">
 				<span class="text-danger">3个</span>心愿单
 			</div>
 		</div>
 		<div class="user-item">
 			<img src="<?=image_avatar()?>" alt="" class="avatar pull-left">
-			<h3>Majorchen</h3>
+			<h3>March</h3>
 			<div class="desc text-muted">
 				<span class="text-danger">3个</span>心愿单
 			</div>
 		</div>
 		<div class="user-item">
 			<img src="<?=image_avatar()?>" alt="" class="avatar pull-left">
-			<h3>Majorchen</h3>
+			<h3>March</h3>
 			<div class="desc text-muted">
 				<span class="text-danger">3个</span>心愿单
 			</div>
 		</div>
 		<div class="user-item">
 			<img src="<?=image_avatar()?>" alt="" class="avatar pull-left">
-			<h3>Majorchen</h3>
+			<h3>March</h3>
 			<div class="desc text-muted">
 				<span class="text-danger">3个</span>心愿单
 			</div>

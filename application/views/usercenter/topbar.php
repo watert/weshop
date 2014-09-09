@@ -5,7 +5,7 @@
 			<div>
 				<div> 
 					<span class="text-muted">京东帐号：</span> 
-					<span>13428960903_p</span>
+					<span>March</span>
 				</div>
 				<div>
 					<span class="text-danger">注册用户</span> 

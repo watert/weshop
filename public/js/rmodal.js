@@ -39,7 +39,7 @@
     RModal.prototype.setMask = function() {
       return this.$mask = $("<div>", {
         "class": "rmodal-mask"
-      }).insertBefore(this.$el).click((function(_this) {
+      }).insertBefore(this.$el).hide().click((function(_this) {
         return function() {
           return _this.hide();
         };

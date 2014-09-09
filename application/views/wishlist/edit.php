@@ -3,7 +3,7 @@
 <head>
 	<? $this->load->view("_common/header");?>
 </head>
-<body class="bubble wishlist profile">
+<body class="bubble wishlist edit">
 
 	<?php // $this->load->view("explore/navbar"); ?>
 	<?php $this->load->view("wishlist/tabs"); ?>
@@ -12,7 +12,7 @@
 	</script>
 
 	<div class="container my-wishes section">
-		<span data-link="wishlist/edit" class="pull-right btn btn-link btn-edit">编辑</span>
+		<span data-link="wishlist/profile" class="pull-right btn btn-link btn-finish">完成</span>
 		<h3 class="section-title">您添加了<span class="text-danger">3个</span>心愿单</h3>
 		<div class="clear"></div>
 		<div class="wishlists">
@@ -23,29 +23,27 @@
 			</div>
 		</div>
 	</div>
-	<div class="container my-follows section">
-		<h3 class="section-title">您关注了<span class="text-danger">5个</span>心愿单</h3>
-		<div class="wishlists">
-			<div class="row">
-				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"我的生日"));?>
-				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"买给女朋友的"));?>
-				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"周末买的"));?>
-				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"数码"));?>
-				<?php $this->load->view("wishlist/wishlist-item",array("title"=>"书"));?>
-			</div>
+	<div class="container tabbar">
+		<div class="text-right">
+			<button class="btn-remove btn btn-danger"><i class="fa fa-trash"></i> 删除</button>
 		</div>
 	</div>
 
 	<?php // $this->load->view("_common/tabs"); ?>
 
-	<?php $this->load->view("_common/tabbar"); ?>
+	<?php  // $this->load->view("_common/tabbar"); ?>
 	<?php $this->load->view("_common/footer"); ?>
 	<?php $this->load->view("wishlist/modal-more"); ?>
 	<script>
 		$(".tab-link:eq(1)").addClass("current");
-		require(["rmodal"],function(){
+		$(".btn-remove").click(function(){
+			if(confirm("确认删除？")){
+				$(".btn-finish").click()
+			}
+		});
+		// require(["rmodal"],function(){
 
-		})
+		// })
 	</script>
 </body>
 </html>

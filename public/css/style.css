@@ -100,6 +100,27 @@ body.bubble .section {
   border: 1px solid #DDD;
   border-width: 1px 0;
 }
+body.bubble .link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body.bubble .link-list .link-item {
+  border-bottom: 1px solid #DDD;
+}
+body.bubble .link-list .link-item a {
+  display: block;
+  color: #666;
+  font-size: 16px;
+  padding: 12px 20px;
+}
+body.bubble .link-list .link-item i.fa-angle-right {
+  font-size: 20px;
+  margin-top: 1px;
+}
+body.bubble .link-list .link-item:last-child {
+  border-bottom: 0;
+}
 body.bubble .modal[data-dir="bottom"] {
   top: auto;
   bottom: -50%;
@@ -339,7 +360,7 @@ body.bubble .tab-link .fa {
 }
 body.bubble.explore.select-channels {
   padding: 0;
-  margin: 20px 0 60px;
+  margin: 20px 0 20px;
 }
 body.bubble.explore.select-channels .page-header {
   margin-top: 0;
@@ -348,15 +369,18 @@ body.bubble.explore.select-channels .page-header {
   font-size: 20px;
 }
 body.bubble.explore.select-channels .channel-item {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   border-radius: 50px;
   background: #BBB;
   color: #FFF;
-  font-size: 20px;
-  line-height: 100px;
+  font-size: 16px;
+  line-height: 80px;
   text-align: center;
   margin-bottom: 20px;
+}
+body.bubble.explore.select-channels .channel-item.active {
+  background: #f2200d;
 }
 body.bubble.explore.select-channels .channel-item.selected {
   color: #e08c85;
@@ -407,6 +431,10 @@ body.bubble.explore #modal-channels .row {
 body.bubble.explore #modal-channels .col-xs-4 {
   padding: 10px;
 }
+body.bubble.explore #modal-channels .channel-title {
+  margin: 0 -20px;
+  font-size: 11px;
+}
 body.bubble.wishlist {
   margin-top: 70px;
 }
@@ -441,7 +469,7 @@ body.bubble.wishlist .navbar .btn-more {
   line-height: 30px;
   padding: 0;
   color: #666;
-  margin: 6px 20px 4px 4px;
+  margin: 12px 20px 4px 4px;
 }
 body.bubble.wishlist .navbar .dropdown-menu {
   padding: 0;
@@ -541,7 +569,7 @@ body.bubble.wishlist .feed-item .avatar {
   margin-left: -29px;
 }
 body.bubble.wishlist .feed-item .btn-follow {
-  margin-top: -3px;
+  margin-top: 0;
 }
 body.bubble.wishlist .feed-item .feed-detail {
   margin-top: 10px;
@@ -576,6 +604,42 @@ body.bubble.wishlist.profile .wishlists {
 }
 body.bubble.wishlist.profile .wishlists .col-xs-4 {
   margin-bottom: 20px;
+}
+body.bubble.wishlist.profile .btn-check {
+  display: none;
+}
+body.bubble.wishlist.edit .tabbar {
+  padding: 10px 20px;
+}
+body.bubble.wishlist.edit .caption {
+  font-size: 11px;
+  margin: 0 -10px;
+  margin-top: 5px;
+}
+body.bubble.wishlist.edit .wishlist-item {
+  position: relative;
+}
+body.bubble.wishlist.edit .btn-check {
+  position: absolute;
+  right: 0;
+  top: 58px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: #FFF;
+  border-radius: 20px;
+  box-shadow: none;
+}
+body.bubble.wishlist.edit .btn-check .fa {
+  color: #FFF;
+}
+body.bubble.wishlist.edit .active .btn-check {
+  background: #00cc00;
+}
+body.bubble.wishlist.edit .btn-finish {
+  margin-top: -5px;
+  margin-right: -10px;
 }
 body.bubble.wishlist.detail {
   margin-top: 0;
@@ -650,10 +714,56 @@ body.bubble.wishlist .panel-body {
   padding: 10px;
   position: relative;
 }
-body.detail .tabbar {
+body#detail {
+  margin-top: 0;
+  padding-top: 0;
+}
+body#detail .good-item {
+  border-top: 0;
+  margin-bottom: 0;
+}
+body#detail .good-title {
+  margin: 5px 0;
+}
+body#detail .details {
+  margin-bottom: 0;
+}
+body#detail .comments {
+  padding: 0;
+  margin-top: -1px;
+}
+body#detail .comment-item {
+  padding: 10px 20px;
+  border-bottom: 1px solid #EEE;
+}
+body#detail .comment-item:last-child {
+  border-bottom: none;
+}
+body#detail .comment-content {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+body#detail .spec {
+  margin-top: -1px;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+body#detail .spec .fa {
+  font-size: 20px;
+  margin-top: 1px;
+}
+body#detail .recommend .section-title {
+  margin: 0 0 20px;
+  color: #666;
+  font-weight: normal;
+}
+body#detail .section.details {
+  padding: 0;
+}
+body#detail .tabbar {
   z-index: 1000;
 }
-body.detail #tab-good-intro img {
+body#detail #tab-good-intro img {
   margin: 10px 0;
   min-height: 120px;
   background-color: rgba(0, 0, 0, 0.1);
@@ -713,7 +823,7 @@ body.rmodal-show .rmodal-mask {
   content: " ";
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   background: rgba(0, 0, 0, 0.5);
   top: 0;
   opacity: 0;
@@ -866,6 +976,9 @@ body.bubble.usercenter .navbar {
   padding: 10px 20px;
   margin-bottom: 0;
   border-bottom: 1px solid #CCC;
+  box-shadow: none;
+  font-size: 15px;
+  line-height: 1.4em;
 }
 body.bubble.usercenter .navbar-links {
   font-size: 11px;
@@ -881,6 +994,11 @@ body.bubble.usercenter .navbar-links .col-xs-3 {
 body.bubble.usercenter .navbar-links .link-item {
   padding: 10px;
   color: #666;
+}
+body.bubble.usercenter .navbar-links .link-item .link-name {
+  padding: 0;
+  margin-top: 0;
+  line-height: 1em;
 }
 body.bubble.usercenter .navbar-links .fa {
   font-size: 20px;

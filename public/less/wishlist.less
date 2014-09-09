@@ -14,7 +14,7 @@ body.bubble.wishlist {
 			border-radius: @btn-more-size/2;
 			line-height: @btn-more-size;
 			padding: 0;
-			color:#666;margin:6px 20px 4px 4px;
+			color:#666;margin:12px 20px 4px 4px;
 		}
 		.dropdown-menu {
 			padding: 0;left: auto;right: 0;top: 110%;
@@ -71,7 +71,7 @@ body.bubble.wishlist {
 		padding: 10px 20px;
 		padding-left:@icon-size+20+5;
 		.avatar {margin-left: -@icon-size - 5;}
-		.btn-follow  {margin-top: -3px;}
+		.btn-follow  {margin-top: 0;}
 		.feed-detail {
 			margin-top: 10px;
 			.img {width:100%;height:80px;border: none;margin:0 0 0;display: inline-block;}
@@ -94,6 +94,30 @@ body.bubble.wishlist {
 			font-size:11px;
 			.col-xs-4 {margin-bottom: 20px;}
 		}
+		.btn-check {display: none;}
+	}
+	&.edit {
+		.tabbar {padding:10px 20px;}
+		.caption {font-size:11px;margin:0 -10px;margin-top: 5px; }
+		.wishlist-item {position: relative;}
+		.btn-check {
+			position: absolute;
+			right: 0;
+			top: 58px;
+			width: 24px;
+			height: 24px;
+			padding: 0;
+			border: 1px solid rgba(0,0,0,.3);
+			background: #FFF;
+			border-radius: 20px;
+			box-shadow: none;
+			.fa {color:#FFF;}
+		}
+		.active .btn-check {
+			background: hsl(120,100%,40%);
+		}
+		.btn-finish {margin-top: -5px;
+			margin-right: -10px;}
 	}
 	&.detail {
 		margin-top: 0; padding-top: 0;

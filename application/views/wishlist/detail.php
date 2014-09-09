@@ -13,7 +13,7 @@
 			<img src="<?=image_avatar()?>" alt="" class="avatar pull-left">
 			<div>
 				<div class="wishlist-heading"> 
-					<a href="" class="user-link">waterwu的心愿单</a> 
+					<a href="" class="user-link">wasabi 的心愿单</a> 
 					<span>"我的驴友装"</span>
 				</div>
 

@@ -7,7 +7,7 @@
 			</span>
 			<div>
 				<div> 
-					<span class="user-link">majorchen</span> 
+					<span class="user-link">March</span> 
 					<strong class="text-danger">5</strong> 
 					<span>个心愿单</span>
 				</div>

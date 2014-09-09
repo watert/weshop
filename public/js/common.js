@@ -2,9 +2,9 @@
 $(function() {
   var $body;
   FastClick.attach(document.body);
-  $body = $("body").on("touchstart", function(e) {}).on("click", "[data-link]", function() {
+  $body = $("body").on("touchstart", function(e) {}).on("click touchend", "[data-link]", function() {
     return location.href = $(this).attr("data-link");
-  }).on("click", "[data-toggle-class]", function() {
+  }).on("click touchend", "[data-toggle-class]", function() {
     var $dom;
     $dom = $(this);
     return $dom.toggleClass($dom.attr("data-toggle-class"));

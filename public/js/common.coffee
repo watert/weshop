@@ -4,9 +4,9 @@ $ ->
 	$body = $("body")
 		.on "touchstart", (e)->
 			return
-		.on "click","[data-link]",->
+		.on "click touchend","[data-link]",->
 			location.href = $(this).attr("data-link")
-		.on "click","[data-toggle-class]",->
+		.on "click touchend","[data-toggle-class]",->
 			$dom = $(this)
 			$dom.toggleClass($dom.attr("data-toggle-class"))
 		.on "click","[data-toggle-text]",->
